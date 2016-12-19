@@ -41,7 +41,10 @@
 #include "fmc.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "stm32746g_discovery.h"
+#include "stm32746g_discovery_lcd.h"
+/** Testing LCD */
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -94,7 +97,8 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
-
+	LCD_Ini();
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,7 +106,7 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-
+	LCD_Test_ColorText();
   /* USER CODE BEGIN 3 */
 
   }
